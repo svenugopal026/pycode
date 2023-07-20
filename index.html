@@ -22,16 +22,13 @@
    <p id="csv"></p>
 <py-script> 
 import pandas as pd
- from pyodied.http import open_url
-url_content=open_url("https://github.dev/svenugopal026/pycode/blob/main/Dataset.csv")
- df=pd.read_csv(open_url(url_content)
+ from pyodide.http import open_url
+url_content=open_url("https://raw.githubusercontent.com/svenugopal026/pycode/main/Dataset.csv")
+ df=pd.read_csv(url_content)
  csv=Element('csv')
  csv.write(df.shape)
 #print(df)
  </py-script>  
-
-   
-
     </py-script></center>
    </body>
  <head>
