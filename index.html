@@ -15,21 +15,21 @@
   <center>
   <!-- Put Python code inside the the <py-script> tag -->
     <py-script>display("Hello World!")</py-script>
-    <py-script>display("Welcome to My First PyScript12")</py-script>
+    <py-script>display("Welcome to My First PyScript123")</py-script>
 <py-env> <!--python library-->
 - pandas
  </py-env>
    <p id="csv"></p>
 <py-script> 
 import pandas as pd
- from pyodide.http import open_url
+from pyodide.http import open_url
 url_content=open_url("https://raw.githubusercontent.com/svenugopal026/pycode/main/Dataset.csv")
  df=pd.read_csv(url_content)
  csv=Element('csv')
  csv.write(df.shape)
 #print(df)
  </py-script>  
-    </py-script></center>
+    </center>
    </body>
  <head>
 
