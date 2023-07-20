@@ -11,6 +11,20 @@
   <center>
   <!-- Put Python code inside the the <py-script> tag -->
     <py-script>display("Hello World!")
+<py-env>
+  - Tkinter
+  - tkMessageBox
+</py-env>
+     <py-script>
+top = Tkinter.Tk()
+def hello():
+   tkMessageBox.showinfo("Say Hello", "Hello World")
+
+B1 = Tkinter.Button(top, text = "Say Hello", command = hello)
+B1.pack()
+top.mainloop() </py-script>
+
+     
     # Taking kilometers input from the user
 kilometers = float(input("Enter value in kilometers: "))
 
