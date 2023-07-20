@@ -10,17 +10,19 @@
   </head>
   <body>
   <!-- Put Python code inside the the <py-script> tag -->
-    <py-script>display("Hello User Enter Kilomerts in the TextBox")</py-script>
+    <py-script>
+     display("Hello User Enter Kilomerts in the TextBox")
+    </py-script>
 
 <py-script>   
 # importing datetime module for now()
 import datetime
  # using now() to get current time
 current_time = datetime.datetime.now()
- 
 # Printing value of now.
 print("Time now at greenwich meridian is:", current_time)
 </py-script>
+   
 <py-script> 
    # Taking kilometers input from the user
 kilometers = float(input("Enter value in kilometers: "))
