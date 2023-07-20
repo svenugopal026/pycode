@@ -23,10 +23,11 @@
 <py-script> 
 import pandas as pd
  from pyodied.http import open_url
-df=pd.read_csv(open_url("https://github.dev/svenugopal026/pycode/blob/main/Dataset.csv")
- csv=Element('csv)
- csv.write(df)
-print(df)
+url_content=open_url("https://github.dev/svenugopal026/pycode/blob/main/Dataset.csv")
+ df=pd.read_csv(open_url(url_content)
+ csv=Element('csv')
+ csv.write(df.shape)
+#print(df)
  </py-script>  
 
    
