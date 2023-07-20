@@ -13,8 +13,18 @@
     <py-script>display("Hello World!")</py-script>
 
 <py-script src="https://github.com/svenugopal026/pycode.git/con1.py"></py-script> 
-<py-repl></py-repl>  
+<py-repl></py-repl>
 
+<py-script>   
+# importing datetime module for now()
+import datetime
+ # using now() to get current time
+current_time = datetime.datetime.now()
+ 
+# Printing value of now.
+print("Time now at greenwich meridian is:", current_time)
+</py-script>
+ 
 <py-script>import platform
 
 my_system = platform.uname()
