@@ -10,21 +10,20 @@
     <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
   <center>
   <!-- Put Python code inside the the <py-script> tag -->
-    <py-script>display("Hello World!")
+    <py-script>display("Hello World!")</py-script>
 <py-env>
-  - Tkinter
-  - tkMessageBox
+- Tkinter
+- tkMessageBox
 </py-env>
-     <py-script>
+<py-script>
 top = Tkinter.Tk()
 def hello():
-   tkMessageBox.showinfo("Say Hello", "Hello World")
-
+tkMessageBox.showinfo("Say Hello", "Hello World")
 B1 = Tkinter.Button(top, text = "Say Hello", command = hello)
 B1.pack()
 top.mainloop() </py-script>
 
-     
+<py-script>     
     # Taking kilometers input from the user
 kilometers = float(input("Enter value in kilometers: "))
 
