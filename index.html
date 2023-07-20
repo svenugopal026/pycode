@@ -19,9 +19,13 @@
 <py-env> <!--python library-->
 - pandas
  </py-env>
+   <p id="csv"></p>
 <py-script> 
 import pandas as pd
-df=pd.read_csv('./pycode/Dataset.csv')
+ from pyodied.http import open_url
+df=pd.read_csv(open_url("https://github.dev/svenugopal026/pycode/blob/main/Dataset.csv")
+ csv=Element('csv)
+ csv.write(df)
 print(df)
  </py-script>  
 
