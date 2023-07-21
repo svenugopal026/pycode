@@ -1,36 +1,22 @@
-<html>
- <head>
-  <body>
-<script>
-      document.addEventListener("contextmenu", (event) => {
-         event.preventDefault();
-      });
-   </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello World!</title>
-    <!-- linking to PyScript assets -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
-    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
-  <center>
-  <!-- Put Python code inside the the <py-script> tag -->
-    <py-script>display("Hello World!")</py-script>
-    <py-script>display("Welcome to My First PyScript1234")</py-script>
-<py-env> <!--python library-->
-- pandas
- </py-env>
-  # <p id="csv"></p>
-<py-script> 
-import pandas as pd
-from pyodide.http import open_url
-url_content=open_url("https://raw.githubusercontent.com/svenugopal026/pycode/main/Dataset.csv")
- df=pd.read_csv(url_content)
- #csv=Element('csv')
- #csv.write(df.shape)
-#print(df)
- </py-script>  
-    </center>
-   </body>
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ....
 
- </html>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+
+    <py-config>
+        packages = ["requests", "pyodide-http"]
+    </py-config>
+</head>
+
+<body>
+    <input type="text" id="username" placeholder="Enter your username" />
+    <button py-click="get_public_repos()" id="manual">Get Repos</button>
+    <div id="manual-write"></div>
+
+    <py-script src="./data.py"></py-script>
+</body>
+
+</html>
