@@ -11,7 +11,7 @@
 <py-script> 
 import pandas as pd
 from pyodide.http import open_url
-url_content=open_url("./main/Dataset.csv")
+url_content=open_url("https://github.com/svenugopal026/pycode/blob/0dd7f6d869d36bbd069202e7c17c40b2e848872f/Dataset.csv")
  df=pd.read_csv(url_content)
  csv=Element('csv')
 csv.write(df.shape)
